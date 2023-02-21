@@ -23,7 +23,7 @@
   // "forwardPorts": [],
 
   // Uncomment the next line to run commands after the container is created.
-  "postStartCommand": "jekyll --version"
+  "postStartCommand": "bundle exec jekyll --version"
   //"postStartCommand": "bash -c 'bundle exec jekyll serve --drafts --force_polling --livereload'"
 
 
