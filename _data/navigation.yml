@@ -1,3 +1,25 @@
 main:
+  - title: "Posts"
+    url: /Posty/
+  - title: "Tutorials"
+    url: /tutorials/  
+  - title: "Talks"
+    url: /talks/  
+  - title: "Cooking"
+    url: /recipes/
+  - title: "All Collections"
+    url: /collections/
+  - title: "Posts By tag,"
+    url: /tags/  
+  - title: "by category"
+    url: /categories/  
+  - title: "by year"
+    url: /year/  
   - title: "Sitemap"
     url: /sitemap/
+
+tuts:
+  - title: "Tutorial One"
+    url: /tutorials/one/
+  - title: "Tutorial Two"
+    url: /tutorials/two/
