@@ -147,6 +147,7 @@ include:
   - .htaccess
   - _pages
 exclude:
+  - clean
   - watch
   - build
   - CHANGELOG
@@ -154,7 +155,6 @@ exclude:
   - README.md
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
 
 # Conversion
 markdown: kramdown
