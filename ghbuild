@@ -1,0 +1,4 @@
+#!/bin/bash
+GITHUB_PAGES: true
+JEKYLL_ENV=production
+bundle exec jekyll build
