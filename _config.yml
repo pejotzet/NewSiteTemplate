@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-#theme: "minimal-mistakes-jekyll"
-remote_theme: "mmistakes/minimal-mistakes"
+theme: "minimal-mistakes-jekyll"
+#remote_theme: "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -187,8 +187,8 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 15 # amount of posts to show
-paginate_path: /Posty/page:num/
+paginate: 10 # amount of posts to show
+paginate_path: /listofposts/page:num/
 timezone: Europe/Warsaw # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
