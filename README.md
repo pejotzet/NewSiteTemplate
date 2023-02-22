@@ -99,7 +99,12 @@ Unfortunately, the process of creation of the build workflow based on **yours** 
 As alternative to GitHub Actions one can use `vscode.dev` working environment.
 In this approach there is no need you even install Visual Studio Code locally.
 You just connect with VSCode server that gives you look and feel of your local VSCode.
-Then serwer connects to your GitHub repository.
+Then serwer may open your local folder or connect to your GitHub repository.
+
+Connect your web browser with [https://vscode.dev/](https://vscode.dev/), choose `Open Remote Repository` and select your repository (it is a two stage process, first you are asked for server - select GitHub, then enter your repository in a format `account/repo`).
+Now you feel as you have been working locally with VSCode.
+
+You can edit and push changes to your repository.
 
 
 ## Authoring
