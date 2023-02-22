@@ -108,7 +108,20 @@ Unfortunately, the process of creation of the custom workflow based on **yours**
 As alternative to `GitHub Actions` one can use `Codespaces` working environment.
 In this approach there is no need you to install anything except the web browser.
 
+Open your acoout page on GitHub (`https://github.com/your-account`), then select `Codespaces`.
+Press button `New Codespace` and fill-in required information.
+The virtual machine you've just hired in the cloud will start create DevContainer defined in the repository, just like your PC was in "[Generating site locally](#Generating-site-locally) approach.
+Please be patient until `PostCreate` and `PostStart` sripts will finich their jobs.
+Since then you can work on a remote PC as on your local machine.
+You can start the `scripts/watch` to see online results of your work (please add the value of `baseurl` after the presented link if you see `404 not found` error).
 
+The word of caution. Using `Codespaces` you are hiring virtual machine in the cloud.
+This service is not free.
+The **activity** of this machine counts to the mentioned earlier **60h/month** limit.
+The key word here is **activity**. Please remeber to deactivate machine when finished.
 
+**You have been warned!**
 
-## Authoring
+Now we can go to more pleasant topic.
+
+## Authoring of pages
