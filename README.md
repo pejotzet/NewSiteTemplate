@@ -82,16 +82,24 @@ Select its icon on the left pane, select all changes by pressing `+` on `Changes
 The commit auto-initializes the build task. You can check it progress in `Actions` menu.
 Your new and shiny page is available at `https://<gh-user>.github.io/<repo>`.
 
-## Remote Containers
+## Remote Repositories
 
-The previous method provides a very limited control over the container used to build your website.
-The builder uses some default container and as developer you have no control over it.
+In fact, there is no need you to create a local copy of your repository and synchronize it with the remote via `Git`.
+You can install extension VSCode extension `Remote Repositories` to directly open your GitHub repositories.
+Please note that when switching environments you should push changes, otherwise they remain local to the enviroment created by `Remote Repositories`.
+By default, pushing changes will activate the build workflow.
+Please consult the file `.github/workflows/jekyll.yml` and the corresponding documentation for other methods.
+The simplest approach is to leave only `workflow_dispatch:` method that activates build by pressing button on the repositorys GitHub page.
+
+## vscode.dev
+
+The previous two methods give you a very limited control over the container used to build your website.
+The GitHub's builder uses some default container and, as developer, you have no control over it.
 Unfortunately, the process of creation of the build workflow based on **yours** container is not straightforward.
-As alternative to GitHub Actions one can use `Remote Repositories` VSCode extension.
-With the help of that extension the same container that in point [Generating site locally](#Generating-site-locally) has been generated locally will be created in the cloud.
-Please note that in this method there is no need you to create a local copy of yours GitHub repository.
-  
-Start the `code` and install extension `Remote Repositories` extension. 
-Then click connectivity green icon in left down corner and select `Open Remote Repository` and 
+As alternative to GitHub Actions one can use `vscode.dev` working environment.
+In this approach there is no need you even install Visual Studio Code locally.
+You just connect with VSCode server that gives you look and feel of your local VSCode.
+Then serwer connects to your GitHub repository.
+
 
 ## Authoring
