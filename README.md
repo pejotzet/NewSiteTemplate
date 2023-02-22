@@ -111,17 +111,41 @@ In this approach there is no need you to install anything except the web browser
 Open your acoout page on GitHub (`https://github.com/your-account`), then select `Codespaces`.
 Press button `New Codespace` and fill-in required information.
 The virtual machine you've just hired in the cloud will start create DevContainer defined in the repository, just like your PC was in "[Generating site locally](#Generating-site-locally) approach.
-Please be patient until `PostCreate` and `PostStart` sripts will finich their jobs.
+Please be patient until `PostCreate` and `PostStart` sripts will finish their jobs.
 Since then you can work on a remote PC as on your local machine.
 You can start the `scripts/watch` to see online results of your work (please add the value of `baseurl` after the presented link if you see `404 not found` error).
 
 The word of caution. Using `Codespaces` you are hiring virtual machine in the cloud.
 This service is not free.
 The **activity** of this machine counts to the mentioned earlier **60h/month** limit.
-The key word here is **activity**. Please remeber to deactivate machine when finished.
+The key word here is **activity**. Please remember to deactivate machine when finished.
 
 **You have been warned!**
 
 Now we can go to more pleasant topic.
 
 ## Authoring of pages
+
+You can remove or rename entries in the navigation bar by editing `_data/naviagtion.yml`.
+Images used by your pages should be stored in folder `assets/images/`.
+The input for Jekyll is prepared in Markdown - a very efficient markup language.
+Jekyll processes that input and creates HTML output on a basis of templates defined inside theme.
+Every input file is equipped with a front matter that tells Jekyll what template apply to its body and sets the variables parametrizing process of conversion.
+Please watch [Mike Dane's Tutorial on Jekyll's front matter](https://www.youtube.com/watch?v=ZtEbGztktvc&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=7).
+Here you can find available [page layouts](https://mmistakes.github.io/minimal-mistakes/docs/layouts/) `Minimum Mistakes` theme.
+The simplest method to start is to add your content to folder `_posts`.
+Filename of each post should start with date of its creation, so please stick to this convection.
+In a front matter of the post you can set not only its title, but also assign category and mark it with tags.
+The template has pages that display posts sorted according to the introduced by you taxonomy.
+Your only task is to refer them in the definition of the navigation bar (`_data/navigation.yml`)
+In a body of the post you can place text, mathematical expressions, images and videos.
+[This explanation of theme helpers](https://mmistakes.github.io/minimal-mistakes/docs/helpers/) demonstrates how to do it efficiently.
+Jekyll also can handle collections other than posts.
+They can be organized as independent units (like `Recipes` in this template) or be the fragments of some larger structure (for instance provided sample tutorials can be chapters of a book).
+Unfortunately, Jekyll is a blog aware system, so posts are special collection.
+As a consequence, taxonomy does not work for other collections.
+Harmonization of all collection types in planned in version 4.x.
+Please refer to [theme's Quick Start guide}(https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) for more in-depth information.
+
+Happy authoring.
+

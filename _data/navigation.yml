@@ -1,6 +1,6 @@
 main:
   - title: "Posts"
-    url: /Posty/
+    url: /listofposts/
   - title: "Tutorials"
     url: /tutorials/  
   - title: "Talks"

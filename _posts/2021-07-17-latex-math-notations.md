@@ -2,6 +2,8 @@
 title: "LaTex Math Notations"
 last_modified_at: 2021-12-19T15:39:14
 dlbook_notation: true
+categories: [ "websites", "development" ]
+tags: [ "math", "latex", "markdown" ] 
 ---
 
 This document provides the notation used in the [Deep Learning Book](https://www.deeplearningbook.org/), and is highly based on this [LaTex file](https://github.com/goodfeli/dlbook_notation/blob/master/notation.tex). You can refer to the source of this post for the latex commands.
