@@ -153,6 +153,9 @@ exclude:
   - CHANGELOG
   - LICENSE
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
