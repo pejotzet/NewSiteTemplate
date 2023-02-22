@@ -1,11 +1,13 @@
-# NewSite
-
 This is template for Jekyll static site. 
-It is a follow up of [Minimal Mistakes Template](https://github.com/j3soon/minimal-mistakes-template/) supplemented with the interface of DevContainers for easy Visual Studio Code (fourther referred as VSCode) site authoring.
+It is a follow-up of [Minimal Mistakes Template](https://github.com/j3soon/minimal-mistakes-template/) supplemented with the interface of DevContainers for easy Visual Studio Code (further referred as VSCode) site authoring.
 The template uses [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/).
 You need Visual Studio Code and Docker to develop your site locally with this template. 
 
-## How to use it?
+## Generating site locally
+
+You need Docker and Visual Studio Code. Network access is required only at development environment setup and obviously, to publish the website.
+
+### Environment setup
 
 Download this repository as ZIP and unpack in some **empty** folder.
 Remove hidden folders `.git` and `.github`, then start
@@ -13,40 +15,83 @@ Visual Studio Code
 ```
 code .
 ```
-Open folder in DevContainer (the apriopriate dialog should appear, otherwise press green icon in left down corner).
+Open folder in DevContainer (the appropriate dialog should appear, otherwise press green icon in left down corner).
 Building the container for the first time may take substantial time. Please be patient.
 When DevContainer is running, please open the terminal (in VSCode)
-and start build and watch process with
+and start build and watch process with running script
+```
+srcipts/watch
+```
+that internally calls Jekyll site generator in continuous build mode
 ```
 bundle exec jekyll serve --drafts --force_polling --livereload
 ```
-The output is accessible in your default system browser at [http://localhost:4000](http://localhost:4000) or in browser builtin into VSCode.
+The output is accessible in your default system browser at [http://localhost:4000](http://localhost:4000) or in browser built-in into VSCode.
 
-## Remote authoring
 
-Create new **Public** repository on Github with `.gitignore` template for Jekyll and no more files.
+### Development
+
+Just run
+```
+code <your_site_folder>
+```
+Put `.` when site folder is a present working directory.
+Network access is not required as all tools are already on your computer.
+
+You can now adapt `_config.yml` to your needs and run
+```
+srcipts/watch
+```
+Please note, changes to `_config.yml` are **not** reflected in the preview - `watch` script must be restarted for that.
+Section "[Authoring](#Authoring)" describes how to modify template in more detail.
+
+At that point you can just jump directly to the template usage guide.
+However, there are method that permit developing your website with less software installed on local system. This is at the price of constant network access requirement.
+If you are interested, please continue reading.
+
+## GitHub Actions
+
+The described below method requires only Visual Studio Code installation on your local system.
+The container that builds your site is created in the cloud.
+GitHub gives for free 60 minutes of worker time a month.
+This method can be well interleaved with local development.
+
+Create new **Public** repository on GitHub with `.gitignore` template for Jekyll and no more files.
 Then go repository `Settings -> Pages`. Select: `Source: GitHub actions`, then workflow type as `GitHub Pages Jekyll`, press button `Configure` and then `Commit` without introducing any changes to the presented configuration file.
-The status of build process you can check in `Actions` menu.
-The build should finish with sucess, although no page was produced.
+You can check the status of build process in `Actions` menu.
+The build should finish with a success, although no page was produced.
 
 Now go back to `code`.
-
 In file `_config.yml` set the following variables
 ```
 url                      : "https://<gh-user>.github.io" #  "https://mmistakes.github.io"
 baseurl                  : "/<repo>" # e.g. "/minimal-mistakes"
 repository               : "<gh-user>/<repo> # e.g. "mmistakes/minimal-mistakes
 ```
- and run the following comands in the container
+Open terminal in `VSCode` and run
 ```
 git init
 git branch -M main
 git remote add origin git@github.com:<your_accout>/<just_created_repo>
 git pull origin main
 ```
-Please note, that this causes that in local preview you should open `https://localhost:4000/<repo>`.
+Please note, that this causes that in local preview you should be opening `https://localhost:4000/<repo>`.
 
-The builtin `code's` Git client should show you changes between your local and remote repository.
+The built-in `code's` Git client should show you changes between your local and remote repository.
 Select its icon on the left pane, select all changes by pressing `+` on `Changes` bar (it appears when bar is hoovered), enter some commit message and select `Commit` and `Synchronize` or `Publish branch`.
 The commit auto-initializes the build task. You can check it progress in `Actions` menu.
 Your new and shiny page is available at `https://<gh-user>.github.io/<repo>`.
+
+## Remote Containers
+
+The previous method provides a very limited control over the container used to build your website.
+The builder uses some default container and as developer you have no control over it.
+Unfortunately, the process of creation of the build workflow based on **yours** container is not straightforward.
+As alternative to GitHub Actions one can use `Remote Repositories` VSCode extension.
+With the help of that extension the same container that in point [Generating site locally](#Generating-site-locally) has been generated locally will be created in the cloud.
+Please note that in this method there is no need you to create a local copy of yours GitHub repository.
+  
+Start the `code` and install extension `Remote Repositories` extension. 
+Then click connectivity green icon in left down corner and select `Open Remote Repository` and 
+
+## Authoring
