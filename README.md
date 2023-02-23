@@ -31,7 +31,6 @@ bundle exec jekyll serve --drafts --force_polling --livereload
 ```
 The live output is accessible in your default system browser at [http://localhost:4000](http://localhost:4000) or in browser built-in into VSCode.
 
-
 ### Development
 
 Just run
