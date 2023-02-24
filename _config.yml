@@ -15,6 +15,7 @@ theme: "minimal-mistakes-jekyll"
 
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+#
 # Site Settings
 locale                   : "en-US"
 title                    : "Site Template"
@@ -22,9 +23,9 @@ title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Pe Zet"
 description              : "Sample framework for your site."
-url                      : "https://pzktit.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/NewSite" # the subpath of your site, e.g. "/blog"
-repository               : "pzktit/NewSite" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://pejotzet.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/NewSiteTemplate" # the subpath of your site, e.g. "/blog"
+repository               : "pejotzet/NewSiteTemplate" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : /assets/images/default-teaser.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : /assets/images/logo.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -105,7 +106,7 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://github.com/pzktit/NewSite"
+      url: "https://github.com/pejotzet/NewSite"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -130,7 +131,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/pzktit"
+      url: "https://github.com/pejotzet"
     # - label: "GitLab"
     #   icon: "fab fa-fw fa-gitlab"
     #   # url:
